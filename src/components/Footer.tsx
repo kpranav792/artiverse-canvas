@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,12 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-hero flex items-center justify-center">
                 <span className="font-serif text-xl font-bold text-primary-foreground">AW</span>
               </div>
               <span className="font-serif text-xl font-bold text-foreground">ArtisanWave</span>
-            </div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               Where creativity finds its canvas. Connecting artists with art lovers worldwide.
             </p>
@@ -22,10 +23,10 @@ const Footer = () => {
           <div>
             <h4 className="font-serif text-lg font-semibold text-foreground mb-4">Explore</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Browse Art</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Categories</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Featured Artists</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Competitions</a></li>
+              <li><Link to="/shop" className="text-muted-foreground hover:text-primary transition-colors">Browse Art</Link></li>
+              <li><Link to="/categories" className="text-muted-foreground hover:text-primary transition-colors">Categories</Link></li>
+              <li><Link to="/artists" className="text-muted-foreground hover:text-primary transition-colors">Featured Artists</Link></li>
+              <li><Link to="/competitions" className="text-muted-foreground hover:text-primary transition-colors">Competitions</Link></li>
             </ul>
           </div>
 

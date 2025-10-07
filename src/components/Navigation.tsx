@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, ShoppingCart, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -7,20 +8,20 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-gradient-hero flex items-center justify-center">
               <span className="font-serif text-xl font-bold text-primary-foreground">AW</span>
             </div>
             <span className="font-serif text-2xl font-bold text-foreground">ArtisanWave</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors">Shop</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">Categories</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">Artists</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">Competitions</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">Community</a>
+            <Link to="/shop" className="text-foreground hover:text-primary transition-colors">Shop</Link>
+            <Link to="/categories" className="text-foreground hover:text-primary transition-colors">Categories</Link>
+            <Link to="/artists" className="text-foreground hover:text-primary transition-colors">Artists</Link>
+            <Link to="/competitions" className="text-foreground hover:text-primary transition-colors">Competitions</Link>
+            <Link to="/community" className="text-foreground hover:text-primary transition-colors">Community</Link>
           </div>
 
           {/* Actions */}
